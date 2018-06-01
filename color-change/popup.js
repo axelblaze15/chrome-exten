@@ -10,6 +10,7 @@
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       chrome.tabs.executeScript(
           tabs[0].id,
-          {code: 'document.body.style.backgroundColor = "' + color + '";'});
+          {code: 'var ele=document.getElementsByClassName("_2t-a _50tj");for (key of ele){key.style.background = "' + color + '"};'});
+      //{code: 'document.body.style.backgroundColor = "' + color + '";'});
     });
   };
